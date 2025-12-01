@@ -40,6 +40,8 @@ export default function HeaderWrapper() {
     if (refresh) {
       await logOut(refresh);
     }
+    console.log("Logout");
+    
 
     localStorage.removeItem("access");
     localStorage.removeItem("refresh");
@@ -69,6 +71,9 @@ export default function HeaderWrapper() {
 
   useEffect(() => {
     const user = GetToken()?.user_id;
+    console.log(user);
+    console.log(!!user);
+    
     setIsLogged(!!user);
     setMounted(true);
   }, []);
