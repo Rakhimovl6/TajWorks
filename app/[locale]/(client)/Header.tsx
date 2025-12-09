@@ -149,10 +149,13 @@ export function Header({ currentPage, onNavigate, darkMode, onToggleDarkMode, is
                         <SquareUser className="w-5 h-5" size={18} />
                         <p>{t("6")}</p>
                       </Button>
-                      <Button onClick={() => router.push("favorite")} variant="ghost" className="rounded-full gap-4">
-                        <UserStar className="w-5 h-5" size={18} />
-                        <p>{t("8")}</p>
-                      </Button>
+                      {role == 'seeker' && (
+                        <Button onClick={() => router.push("favorite")} variant="ghost" className="rounded-full gap-4">
+                          <UserStar className="w-5 h-5" size={18} />
+                          <p>{t("8")}</p>
+                        </Button>
+                      )}
+
                       <Button onClick={() => { onLogout(); setDesktopPopoverOpen(false) }} variant="ghost" className="rounded-full gap-4 text-red-500">
                         <LogOut className="w-5 h-5" size={18} />
                         <p>{t("7")}</p>
@@ -237,10 +240,12 @@ export function Header({ currentPage, onNavigate, darkMode, onToggleDarkMode, is
                         <SquareUser className="w-5 h-5" size={18} />
                         <p>{t("6")}</p>
                       </Button>
-                      <Button onClick={() => router.push("favorite")} variant="ghost" className="rounded-full gap-4">
-                        <UserStar className="w-5 h-5" size={18} />
-                        <p>{t("8")}</p>
-                      </Button>
+                      {role == 'seeker' && (
+                        <Button onClick={() => router.push("favorite")} variant="ghost" className="rounded-full gap-4">
+                          <UserStar className="w-5 h-5" size={18} />
+                          <p>{t("8")}</p>
+                        </Button>
+                      )}
                       <Button
                         onClick={() => { onLogout(); setMobileMenuOpen(false) }}
                         variant="ghost"

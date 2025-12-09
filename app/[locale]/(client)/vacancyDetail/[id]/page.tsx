@@ -88,7 +88,7 @@ export default function VacancyDetailPage() {
         {/* Back Button */}
         <Button
           variant="ghost"
-          onClick={() => router.push("vacancies")}
+          onClick={() => router.push("/vacancies")}
           className="mb-6 rounded-xl"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
